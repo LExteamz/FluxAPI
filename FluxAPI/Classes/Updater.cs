@@ -42,11 +42,13 @@ namespace FluxAPI.Classes
                         RegistryHandler.SetValue("ModuleChecksum", newModuleChecksum);
                     }
 
-                    MessageBox.Show(
-                        $"Local FluxteamAPI.dll SHA1: {localFluxChecksum}\n" +
-                        $"Extrn FluxteamAPI.dll SHA1: {newFluxChecksum}\n" +
-                        $"Local Module.dll      SHA1: {localModuleChecksum}\n" +
-                        $"Extrn Module.dll      SHA1: {newModuleChecksum}", FluxFiles.Executor);
+                    /*
+                        MessageBox.Show(
+                            $"Local FluxteamAPI.dll SHA1: {localFluxChecksum}\n" +
+                            $"Extrn FluxteamAPI.dll SHA1: {newFluxChecksum}\n" +
+                            $"Local Module.dll      SHA1: {localModuleChecksum}\n" +
+                            $"Extrn Module.dll      SHA1: {newModuleChecksum}", FluxFiles.Executor);
+                    */
                 }
                 else
                 {

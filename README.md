@@ -4,7 +4,7 @@ FluxAPI, simple exploit API.
 ## DISCLAIMER
 To whom it may concern,
 
-I hereby declare that I have created an open-source exploit API named "FluxAPI" solely for educational purposes. I explicitly refuse any responsibility for any misuse or illegal activities that may arise from the use of this API. The code is provided "as is," without any warranty, and users assume all risks associated with its use.
+I hereby declare that I have created an open-source exploit API named "FluxAPI" solely for educational purposes. I explicitly refuse any responsibility for any misuse or illegal activities that may arise from the use of this API. The code is provided "as is", without any warranty, and users assume all risks associated with its use.
 <br><br>
 I do not condone or support any unethical or malicious activities that may be facilitated using FluxAPI. It is the responsibility of the users to ensure that they comply with all applicable laws and regulations while using this API.
 <br><br>
@@ -41,17 +41,12 @@ below the InitializeAPI line (not recommended). */
 ```
 If we want to add a custom identifyexecutor()/getexecutorname, we'll need to do:
 ```csharp
-Fluxus.InitializeAPI("Executor Name");
+Fluxus.InitializeAsync("Executor Name");
 ```
 
 We start the nice things, how to inject, is super-simple, just do: 
 ```csharp
 Fluxus.Inject();
-```
-
-If we want to do auto attach and handle it. We'll need to do:
-```csharp
-Fluxus.DoAutoAttach = true;
 ```
 
 For executing we need a Textbox in our project, here is an example:
@@ -77,7 +72,7 @@ namespace FluxTest
         public MainWindow()
         {
             InitializeComponent(); 
-            Fluxus.InitializeAPI();
+            Fluxus.InitializeAsync();
         }
 
         private async void Attach_Click(object sender, EventArgs e)

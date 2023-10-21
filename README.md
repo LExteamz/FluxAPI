@@ -11,19 +11,19 @@ I do not condone or support any unethical or malicious activities that may be fa
 I urge all users to use FluxAPI only for educational purposes and to refrain from using it for any illegal or unethical activities. By using this API, users acknowledge and agree to assume all risks associated with its use.
 
 ## How this works
-JJSploit, by WeAreDevs got dissasembled and a guy on [GitHub uploaded a repository](https://github.com/MoistMonkey420/MicrosoftRobloxFluxAPI/)
-showing an example of how to use it.
+JJSploit by WeAreDevs got disassembled, and a guy on [GitHub uploaded a repository](https://github.com/MoistMonkey420/MicrosoftRobloxFluxAPI/)
+shows an example of how to use it.
 There are more ports of this type, like this thread on [WeAreDevs](https://forum.wearedevs.net/t/34077)
 
 This Class Library I created uses the [JJploit](https://wearedevs.net/dinfo/JJSploit) DLLs, provided by [Fluxus](https://fluxteam.net).
 
 ## Documentation
 #### How to create a simple executor with FluxAPI:
-Add the FluxAPI.dll to references of your Visual Studio Project, we need the next things:
+Add the FluxAPI.dll to references of your Visual Studio Project, we need the following things:
 - .NET Framework 4.8 Project (Windows Forms or WPF (Windows Presentation Framework))
 - x86 Build Configuration
 - Simple C# Knowledge<br>
-- This will work on the UWP version, not Web Version
+- This will work on the UWP version, not the Web Version
 In the entry of your program. Put the class name above the declaration of the form, here is an example: 
 ```csharp
 private protected readonly Flux Fluxus = new Flux(); // Here, we're declaring the API.
@@ -44,12 +44,12 @@ If we want to add a custom identifyexecutor()/getexecutorname, we'll need to do:
 Fluxus.InitializeAsync("Executor Name");
 ```
 
-We start the nice things, how to inject, is super-simple, just do: 
+We start with the nice things, how to inject, is super-simple, just do: 
 ```csharp
 Fluxus.Inject();
 ```
 
-For executing we need a Textbox in our project, here is an example:
+For execution we need a Textbox in our project, here is an example:
 
 ```csharp
 private void Execute(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluxAPI;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -6,11 +7,12 @@ namespace Test
 {
     public partial class FluxTest : Form
     {
-        FluxAPI.Flux GetFlux = new FluxAPI.Flux();
+        readonly Flux GetFlux = new Flux();
 
         public FluxTest()
         {
             InitializeComponent();
+            GetFlux.DoAutoAttach = true;
             _ = GetFlux.InitializeAsync("RC7");
         }
 

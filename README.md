@@ -26,27 +26,29 @@ Add the FluxAPI.dll to references of your Visual Studio Project, we need the nex
 - This will work on the UWP version, not Web Version
 In the entry of your program. Put the class name above the declaration of the form, here is an example: 
 ```csharp
-private protected readonly Flux Fluxus = new Flux(); // Here, we're declaring the API.
+private protected readonly Flux GetFlux = new Flux(); // Here, we're declaring the API.
+
 public MainWindow()
 {
-      InitializeComponent(); 
+      InitializeComponent();
 }
 ```
 
-Then, we need to Initialize the API, this will download files and redistributables of the API, like FluxteamAPI.dll and Module.dll into `./ProgramData` folder, located in C:\ProgramData
+Then, we need to Initialize the API, this will download files and redistributables of the API, like FluxteamAPI.dll and Module.dll into folder, located in `C:\ProgramData\Flux`
+If we want to add a custom _identifyexecutor()/getexecutorname_ and _request header_, we'll need to do:
 ```csharp
-Fluxus.InitializeAPI();
-/* If you want to ensure it downloads the DLLs you can put Fluxus.DownloadDLLs();
-below the InitializeAPI line (not recommended). */
+GetFlux.InitializeAsync("Executor Name");
 ```
-If we want to add a custom identifyexecutor()/getexecutorname, we'll need to do:
+
+If we want an auto attach, we can do this below the initialize function **BELOW THE INITIALIZE LINE**. You're responsible for the use of the boolean.
 ```csharp
-Fluxus.InitializeAsync("Executor Name");
+GetFlux.DoAutoAttach = true;
+GetFlux.InitializeAsync("Executor Name");
 ```
 
 We start the nice things, how to inject, is super-simple, just do: 
 ```csharp
-Fluxus.Inject();
+GetFlux.Inject(<void>);
 ```
 
 For executing we need a Textbox in our project, here is an example:
@@ -54,7 +56,7 @@ For executing we need a Textbox in our project, here is an example:
 ```csharp
 private void Execute(object sender, EventArgs e)
 {
-      Fluxus.Execute(TextBox.Text);
+      GetFlux.Execute(<string> Text);
 }
 ```
 
@@ -68,21 +70,21 @@ namespace FluxTest
 {
     public partial class MainWindow : Form
     {
-        private protected readonly Flux Fluxus = new Flux();
+        private protected readonly Flux GetFlux = new Flux();
         public MainWindow()
         {
             InitializeComponent(); 
-            Fluxus.InitializeAsync();
+            GetFlux.InitializeAsync();
         }
 
         private async void Attach_Click(object sender, EventArgs e)
         {
-            Fluxus.Inject();
+            GetFlux.Inject();
         }
 
         private void Run_Click(object sender, EventArgs e)
         {
-            Fluxus.Execute(TextBox.Text);
+            GetFlux.Execute(TextBox.Text);
         }
     }
 }

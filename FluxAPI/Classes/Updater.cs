@@ -5,7 +5,6 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using File = System.IO.File;
 
 namespace FluxAPI.Classes
@@ -41,14 +40,6 @@ namespace FluxAPI.Classes
                         RegistryHandler.SetValue("FluxChecksum", newFluxChecksum);
                         RegistryHandler.SetValue("ModuleChecksum", newModuleChecksum);
                     }
-
-                    /*
-                        MessageBox.Show(
-                            $"Local FluxteamAPI.dll SHA1: {localFluxChecksum}\n" +
-                            $"Extrn FluxteamAPI.dll SHA1: {newFluxChecksum}\n" +
-                            $"Local Module.dll      SHA1: {localModuleChecksum}\n" +
-                            $"Extrn Module.dll      SHA1: {newModuleChecksum}", FluxFiles.Executor);
-                    */
                 }
                 else
                 {

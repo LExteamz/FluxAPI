@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("LEx Softworks")]
 [assembly: AssemblyProduct("FluxAPI")]
-[assembly: AssemblyCopyright("Copyright (c) Excel 2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright (c) LEx Softworks 2023")]
+[assembly: AssemblyTrademark(" LEx Softworks")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

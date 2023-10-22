@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("LEx Softworks")]
 [assembly: AssemblyProduct("FluxAPI")]
 [assembly: AssemblyCopyright("Copyright (c) LEx Softworks 2023")]
-[assembly: AssemblyTrademark(" LEx Softworks")]
+[assembly: AssemblyTrademark("LEx Softworks")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

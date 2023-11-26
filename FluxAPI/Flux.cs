@@ -35,12 +35,6 @@ namespace FluxAPI
         {
             FluxFiles.Executor = Executor;
 
-            if (Utility.IsAdmin() == false)
-            {
-                MessageBox.Show("The application must be executed with Administrator privileges.", $"{Executor}", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Environment.Exit(0);
-            }
-
             await Updater.CheckForUpdates();
             FluxInterfacing.create_files(FluxFiles.Module);
 

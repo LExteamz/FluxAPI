@@ -4,13 +4,13 @@ namespace FluxAPI.Classes
 {
     internal static class Utility
     {
-        internal static bool IsAdmin()
+        internal static bool IsUser()
         {
             bool isElevated;
             using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
             {
                 WindowsPrincipal principal = new WindowsPrincipal(identity);
-                isElevated = principal.IsInRole(WindowsBuiltInRole.Administrator);
+                isElevated = principal.IsInRole(WindowsBuiltInRole.User);
             }
 
             return isElevated;

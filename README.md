@@ -1,6 +1,9 @@
 # FluxAPI
 FluxAPI, simple exploit API.
 
+# No longer working
+Since the game introduced Hyperion in the Universal Windows Platform version of it, and the executable file switched to x64 bits architecture. The owners of the modules discontinued it. Hence why, this project is discontinued too.
+
 ## DISCLAIMER
 To whom it may concern,
 
